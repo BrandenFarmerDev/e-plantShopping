@@ -12,6 +12,14 @@ function renderApp() {
 }
 
 describe('Paradise Nursery shopping flow', () => {
+  it('shows the company name and Get Started navigation action', async () => {
+    const user = userEvent.setup();
+    renderApp();
+    expect(screen.getByText('Paradise Nursery')).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Get Started' }));
+    expect(screen.getByRole('heading', { name: 'Air-purifying plants' })).toBeInTheDocument();
+  });
+
   it('renders three categories with six unique plants each', () => {
     renderApp();
     expect(screen.getByRole('heading', { name: 'Air-purifying plants' })).toBeInTheDocument();

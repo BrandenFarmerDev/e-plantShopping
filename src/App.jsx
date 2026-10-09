@@ -23,7 +23,7 @@ function Navbar({ activePage, onNavigate, quantity }) {
           <ShoppingBag size={17} /> Cart <span className="cart-badge" data-testid="cart-quantity">{quantity}</span>
         </a>
       </nav>
-      <button className="header-note" type="button" onClick={() => go('plants')}>Find your plant <ArrowUpRight size={15} /></button>
+      <button className="header-note" type="button" onClick={() => go('plants')}>Get Started <ArrowUpRight size={15} /></button>
     </header>
   );
 }
