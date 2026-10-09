@@ -13,6 +13,8 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react/jsx-no-target-blank': 'off',
+    // The IBM starter app uses plain JSX/JavaScript without PropTypes or TS types.
+    'react/prop-types': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
